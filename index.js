@@ -11,18 +11,20 @@ var server = http.createServer(function (request, response) {
 
     var path = url.parse(request.url, true);
     var filename = "." + path.pathname + "index.html";
+    
     if (path.pathname === '/') {
         show.show(filename, response);
     } else if (path.pathname.includes("/class/")) {
         filename = path.pathname
         readData.read(filename, response);
     } else if (path.pathname === '/enroll') {
+        filename = "./index.html"
+        show.show(filename, response);
         data.dataHandler(request);
-    }
-    else {
+    } else {
         response.writeHead(404, { 'Content-Type': 'text/html' });
         return response.end("404 Not Found");
     }
 
 
-}); server.listen(8080)
+}); server.listen(3000)

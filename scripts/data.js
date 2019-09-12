@@ -1,5 +1,6 @@
 var fs = require('fs');
-exports.dataHandler = function(request,response){
+
+exports.dataHandler = function(request){
     request.on('data', function (data) {
         allData = JSON.parse(data);
         student = allData.name;

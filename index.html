@@ -15,14 +15,14 @@
 <body>
   <!-- <script src="server.js"></script>  -->
   <div class="container">
-    <div class="card card-center" style="width:350px  ;text-align: center">
+    <div class="card card-center" style="width:350px ; text-align: center; margin-left: 32%; margin-top: 3%">
       <img class="card-img-top" src="https://static.thenounproject.com/png/35778-200.png" style="width:100%">
       <div class="card-body">
         <h4 class="card-title">Add Student</h4>
-        <input type="text" id="name" placeholder="Name" class="form-control"><br>
-        <input type="text" id="subject" placeholder="Subject" class="form-control"><br>
-        <input type="text" id="courseyr" placeholder="Course & Year" class="form-control"><br>
-        <input type="text" id="email" placeholder="Email" class="form-control"><br>
+        <input type="text" id="name" placeholder="Name" class="form-control" required><br>
+        <input type="text" id="subject" placeholder="Subject" class="form-control" required><br>
+        <input type="text" id="courseyr" placeholder="Course & Year" class="form-control" required><br>
+        <input type="text" id="email" placeholder="Email" class="form-control" required><br>
         <button id="add" class="btn btn-primary">Add</button>
       </div>
     </div>
@@ -38,7 +38,7 @@ $(document).ready(function () {
     
     $.ajax({
       type: "POST",
-      url: "http://127.0.0.1:8080/enroll",
+      url: "http://127.0.0.1:3000/enroll",
       data: JSON.stringify({name: nameStudent,  subject: sub.replace(" ", "-"),  courseYR: course, email: emails}),
       error : function(error){
         alert("Cannot enroll");

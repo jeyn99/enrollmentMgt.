@@ -1,6 +1,6 @@
 exports.createTable = function(data,response){
     var table= "<html><head><title>Class List</title><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>"+
-    "<body><center><table class='table table-responsive table-striped '>"+
+    "<body><center><table class='table table-responsive table-striped'>"+
     "<thead><th>Names</th><th>Course</th><th>Email</th></thead><tbody>";
     var tr = "<tbody>";
     var closer = "</tbody></table></center></body></head></html>";
